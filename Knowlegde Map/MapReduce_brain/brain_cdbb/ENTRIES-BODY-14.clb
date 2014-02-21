@@ -16,9 +16,10 @@ margin-top: 0pt;  margin-bottom: 0pt;
 </style>
 </head>
 <body>
-<p>Similar to reduce, but restricted to results of one map.</p>
-<p>Preaggregates data generated from one mapping function before sending it to a reducer.</p>
+<p>map (in_key, in_value) -> list(out_key, intermediate_value)</p>
 <p> </p>
-<p>can save network bandwith</p>
+<p>many more map tasks than physical machines: fine granularity tasks</p>
+<p> </p>
+<p>execute map tasks close to data in distributed file system</p>
 </body>
 </html>

@@ -16,9 +16,8 @@ margin-top: 0pt;  margin-bottom: 0pt;
 </style>
 </head>
 <body>
-<p>Similar to reduce, but restricted to results of one map.</p>
-<p>Preaggregates data generated from one mapping function before sending it to a reducer.</p>
-<p> </p>
-<p>can save network bandwith</p>
+<p>No need for virtualization, provisioning, automation, ...</p>
+<p>Just mapreduce framework on basic OS and GFS/HDFS/... distributed storage</p>
+<p>mapreduce = "Data OS"</p>
 </body>
 </html>

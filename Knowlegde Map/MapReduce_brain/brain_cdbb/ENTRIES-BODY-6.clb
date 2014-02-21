@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="generator" content="EditLive! 9.0.0.115" />
+<meta name="generator" content="TheBrain 8.0.0.7" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<style type="text/css">
+<!--
+body {
+font-family: Arial;  font-size: small;  background: #ffffff;  color: #000000;
+}
+p {
+margin-top: 0pt;  margin-bottom: 0pt;
+}
+-->
+</style>
+</head>
+<body>
+<p>map(String input_key, String input_value):<br />
+     // input_key: document name<br style=" margin-left: 40.0px;" />
+     // input_value: document contents<br style=" margin-left: 20.0px;" />
+     for each word w in input_value:<br style=" margin-left: 20.0px;" />
+         EmitIntermediate(w, "1");</p>
+<p> </p>
+<p>reduce(String output_key, Iterator intermediate_values):<br />
+     // output_key: a word<br />
+     // output_values: a list of counts<br />
+     int result = 0;<br />
+     for each v in intermediate_values:<br />
+         result += ParseInt(v);<br />
+         Emit(AsString(result));</p>
+</body>
+</html>
