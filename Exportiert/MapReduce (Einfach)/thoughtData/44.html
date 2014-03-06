@@ -1,0 +1,89 @@
+<!-- (C) 2006-2007 TheBrain Technologies LP. http://www.thebrain.com -->
+<html>
+<head>
+<title>
+Word Count
+</title>
+<link href="../res/main.css" rel="stylesheet" type="text/css"/>
+<link href="../res/menuBrain.css" rel="stylesheet" type="text/css"/>
+<link href="../res/notes.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+<div class="leftHalf">
+  <div class="title">Word Count</div>
+</div>
+<div class="rightHalf">
+  <div class="unitContent" style="text-align: right;">
+
+  </div>
+</div>
+
+<!-- make sure to put a rule after columns if you want the next section to take up the full width of the browser -->
+<div class="rule"></div>
+
+<!-- COLUMNS -->
+<div class="leftNarrow">
+  <div class="simpleContent">
+  
+    <table width="100%"><tbody>
+      <tr><td class="navPath"><a href="43.html">Algorithm examples</a></td></tr>
+
+    </tbody></table>
+    <br/>
+    <table width="100%"><tbody>
+      <tr><td class="navCurrent" width="100%">Word Count</td></tr>
+    </tbody></table>
+    <br/>
+    <table width="100%"><tbody>
+
+    </tbody></table>
+    <br/>
+    <table width="100%"><tbody>
+      <tr><td class="navSiblings"><a target="_parent" href="72.html" title="">Distributed Sort</a></td></tr>
+
+    </tbody></table>
+    <br/>
+    <table width="100%"><tbody>
+
+    </tbody></table>
+
+  </div>
+  <div class="bl"><div class="br"><div class="tl"><div class="tr">
+    <div class="unitContent">
+      21.02.2014 14:50<br/>
+      <a href="mailto:"><b>autarch</b></a>
+    </div>
+  </div></div></div></div>
+  <div class="clear">&nbsp;</div>
+  <div class="tinyInfo">
+    Created using <a href="http://www.thebrain.com/personal">TheBrain</a>.<br/>
+    <a href="http://www.thebrain.com/personal"><img src="../res/images/TheBrain.png" border="0" style="margin-top:5px" /></a><br/>
+  </div>
+</div>
+<div class="rightWide">
+  <div class="simpleContent">
+<p>map(String input_key, String input_value):<br />
+&#160;&#160;&#160;&#160; // input_key: document name<br style=" margin-left: 40.0px;" />
+&#160;&#160;&#160;&#160; // input_value: document contents<br style=" margin-left: 20.0px;" />
+&#160;&#160;&#160;&#160; for each word w in input_value:<br style=" margin-left: 20.0px;" />
+&#160;&#160;&#160;&#160; &#160;&#160;&#160; EmitIntermediate(w, "1");</p>
+<p>&#160;</p>
+<p>reduce(String output_key, Iterator intermediate_values):<br />
+&#160;&#160;&#160;&#160; // output_key: a word<br />
+&#160;&#160;&#160;&#160; // output_values: a list of counts<br />
+&#160;&#160;&#160;&#160; int result = 0;<br />
+&#160;&#160;&#160;&#160; for each v in intermediate_values:<br />
+&#160;&#160;&#160;&#160; &#160;&#160;&#160; result += ParseInt(v);<br />
+&#160;&#160;&#160;&#160; &#160;&#160;&#160; Emit(AsString(result));</p>
+</div><div class="rule"></div>
+  <div class="simpleContent">
+    <a href="44/MapReduceWordCountOverview1.png"><img src="../res/images/icons/unknown.gif" border="0" />&nbsp;MapReduceWordCountOverview1.png</a>&nbsp;&nbsp;&nbsp;&nbsp;
+  </div>
+</div>
+
+<!-- make sure to put a rule after columns if you want the next section to take up the full width of the browser -->
+<div class="emptyRule"></div>
+
+</body>
+</html>
