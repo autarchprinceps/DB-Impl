@@ -1,0 +1,725 @@
+ 
+   
+   
+   
+   
+    
+ 
+
+ 
+    
+ 
+
+
+  
+
+ 
+ 
+ 
+
+ 
+Golem.isTopOnHomepage = false;
+if(105028 == Golem.CurrentArticle.idArticle) {
+    Golem.isTopOnHomepage = true;
+}
+ 
+ 
+ 
+ 
+     
+ 
+   
+ 
+ 
+    
+ 
+ 
+ 
+ 
+  var n_pbt = "";
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+// 
+ 
+     
+ 
+ 
+
+ 
+ 
+ 
+ 
+// 
+ 
+     
+ 
+ 
+   
+  
+
+ 
+  
+ 
+     
+           
+     
+     
+         Navigation 
+         
+              Home  
+              Ticker  
+         
+      
+     
+         Top-Themen: 
+ 
+  Cebit 2014    NSA    Windows 8.1    Xbox One    Fritzbox    iPad Air    mehr    Playstation 4    Nexus 5    iPhone 5S    Haswell    iOS 7    Test    Firefox    Galaxy S4    Google+    Facebook    GTA 5    Linux    Foto    Security    Google    Open Source    Android    Apple    Games    
+       
+
+ 
+     
+     
+         Suchbegriffe: 
+         
+             
+         
+         
+             
+         
+     
+ 
+  
+
+         
+             
+                 
+ 
+Golem.checkRefCookie();
+if ((typeof(Golem.grsess)!="undefined")  
+document.write(unescape("%3Cscript src='http://www.golem.de/_js/rl_art_afc2.js' type='text/javascript'%3E%3C/script%3E"));
+document.write(unescape("%3Cscript src='http://pagead2.googlesyndication.com/pagead/show_ads.js' type='text/javascript'%3E%3C/script%3E"));
+}
+ 
+
+ 
+
+ 
+         Presto 
+         Wie Facebook 300 Petabyte in Echtzeit analysiert 
+ 
+
+ 
+Facebook hat  Presto  als Open Source veröffentlicht, eine interaktive SQL-Engine für Hadoop, mit der sich große Datenmengen in kurzer Zeit analysieren lassen. Presto soll dabei zehnmal schneller sein als das Gespann aus Hive und Mapreduce.
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ Anzeige 
+ 
+// 
+ 
+     
+ 
+ 
+ 
+
+
+ 
+ 
+ Facebook speichert nach eigenen Angaben mehr als 300 Petabyte an Daten und nutzt diese für verschiedene Applikationen. Dabei greift Facebook auf unterschiedliche Ansätze zur Datenanalyse zurück, von der Batch-Verarbeitung, um Verknüpfungen zwischen Nutzern zu modellieren, bis zu maschinellem Lernen und interaktiven Analysen, die in Echtzeit ablaufen. Gerade Letzteres ist bei Daten in der Größenordnung von Facebook eine enorme Herausforderung, denn je schneller die Systeme auf die Abfragen der Analysten antworten, desto besser lassen sich die Daten auch untersuchen. 
+ Dazu hat Facebook ein Data-Warehouse aufgebaut, dessen Daten in einigen wenigen großen Hadoop-Clustern gespeichert sind und gewöhnlich mittels Mapreduce und Hive analysiert werden. Doch bei Datenmengen in Petabyte kommt dieser Ansatz an seine Grenzen,  weshalb Facebook ein interaktives Analysesystem entwickelt hat , das für kurze Antwortzeiten optimiert ist:  Presto . 
+ Verteilte SQL-Query-Engine für Ad-hoc-Analysen 
+ Bei Presto handelt es sich um eine verteilte SQL-Query-Engine, die für Ad-hoc-Analysen mit hoher Geschwindigkeit optimiert ist. Presto unterstützt Ansi SQL einschließlich komplexer Abfragen, Aggregationen, Joins und Fensterfunktionen. Dabei sendet der Client eine SQL-Abfrage an den Presto-Koordinator, der die Anfrage parst und analysiert und die Ausführung plant. Anschließend stellt ein Scheduler eine Ausführungspipeline zusammen, verteilt Aufgaben an die Nodes, die möglichst nah an den Daten liegen, und überwacht den Fortschritt. Der Client erhält dann Daten aus der Output-Stage, die wiederum von darunterliegenden Stages gefüllt wird. 
+ Das Ausführungsmodell von Presto unterscheidet sich fundamental von Hive und Mapreduce: Hive übersetzt Abfragen in mehrere Stufen von Mapreduce-Tasks, die dann nacheinander ausgeführt werden. Dabei liest jede Task Daten von den Platten und schreibt Zwischenergebnisse zurück. Presto hingehen nutzt kein Mapreduce, sondern eine eigene Abfrage- und Ausführungsengine, die der SQL-Semantik folgt. 
+ Um das Scheduling zu verbessern, werden alle Berechnungen im Speicher abgewickelt und zwischen verschiedenen Stages durchgereicht, um unnötiges I/O und die damit verbundenen Latenzen zu vermeiden. Dabei werden mehrere Stages parallel ausgeführt und Daten von einer Stage in die andere gestreamt, sobald sie zur Verfügung stehen. Das vermeidet Verzögerungen und sorgt für schnellere Antwortzeiten. 
+ Umgesetzt wurde Presto in Java. Die Software kompiliert Teile des Query-Plans dynamisch in Byte-Code, aus dem die JavaVM optimierten nativen Maschinencode erzeugt.
+
+ 
+ 
+ 
+
+   
+  1  
+  2  
+     
+  
+  
+  Nicht nur f r Hadoop         
+ 
+ 
+ 
+                 
+                 
+
+ 
+
+ 
+     
+                 
+             
+                  
+                  1 
+             
+         
+                 
+             
+                  
+                 56 
+             
+         
+         
+             
+                  
+                 38 
+             
+         
+         
+             
+                  
+                 13 
+             
+         
+     
+ 
+ 
+
+
+if(!_onSocialClick) {
+    var _onSocialClick = function(type, mode, sn, aid) {
+        var t = 'd', m = 'button';
+
+        switch(type) {
+            case 'mobile': t = 'm'; break;
+            case 'tablet': t = 't'; break;
+        }
+        switch(mode) {
+            case 'bottom': m = m + 'low' + '/' + sn + '/' + aid; break;
+            case 'sidebar': m = m + '/' + sn + '/' + aid; break;
+        }
+
+        _gcpx.push(['ev', t, m]);
+
+        return true;
+    };
+}
+
+ 
+ 
+  
+ 
+ 
+ 
+  
+ 
+      Kommentar bersicht  
+       Re: Wie schnell das sein k nnte ...    draftbreaker  12. Nov 2013   brigens http://en.wikipedia.org/wiki/Profile-guided_optimization 
+Java ist schnell...  
+   Re: SQL oder No-SQL    unveu  08. Nov 2013  Man muss ja die ganzen Researcher und Admins langsam umstellen, die kriegen ja nen Schock...  
+     
+         Kommentieren 
+     
+  
+ 
+ 
+ 
+ 
+ 
+    Verwandte Videos               
+ 
+
+ 
+
+ 
+   
+     
+      Paper von Facebook ausprobiert      
+      10 Jahre Facebook - Trailer (A Look Back)      
+      Paper von Facebook - Trailer      
+      Cold-Storage-System mit Blu-rays von Facebook      
+      Facebook mit Autostart-Videos im Newsfeed      
+      Instagram Direct - Trailer      
+      Cinema stabilisiert Instagram-Videos      
+      Facebook Home auf Nexus 7 ausprobiert      
+      Facebooks Neuerungen - M rz 2013 (komplette PK)      
+      Mark Zuckerberg  ber Projekt Graph f r Facebook      
+      Facebook - Trailer (The Things That Connect Us)      
+      Farmville 2 - Gameplay vom Spielbeginn      
+      Farmville 2 - Making-of mit Gameplay      
+      Curiosity - Trailer (The Cube)      
+      Facebook 5.0 f r iOS - Trailer      
+      Peter Moore k ndigt Origin f r Android und Mac OS X an      
+      Amazon Game Studios - Living Classics      
+      Outernauts von Insomniac angespielt      
+      Werbevideo der Facebook-App If I die      
+      Sim City Social - Trailer (More City, Less Ville)      
+      Sim City Social - Gameplay vom Spielbeginn      
+     
+   
+ 
+
+ 
+
+  
+              
+
+             
+ 
+     Artikel 
+   Nicht nur f r Hadoop (Bild: Presto)       
+  Artikel:   Presto  Wie Facebook 300 Petabyte in Echtzeit analysiert 
+  Inhalt:   
+  Nicht nur f r Hadoop  
+  
+          Datum: 
+ 7.11.2013, 11:17          
+          Autor: 
+         Jens Ihlenfeld          
+                  Themen:   Big Data ,  Cloud Computing ,  Datawarehouse ,  Facebook ,  Hadoop ,  Presto ,  SQL ,  Soziales Netz ,  Unternehmenssoftware ,  Applikationen  
+          Teilen: 
+            
+ 
+
+ 
+     
+                 
+             
+                  
+                  1 
+             
+         
+                 
+             
+                  
+                 56 
+             
+         
+         
+             
+                  
+                 38 
+             
+         
+         
+             
+                  
+                 13 
+             
+         
+     
+ 
+ 
+
+
+if(!_onSocialClick) {
+    var _onSocialClick = function(type, mode, sn, aid) {
+        var t = 'd', m = 'button';
+
+        switch(type) {
+            case 'mobile': t = 'm'; break;
+            case 'tablet': t = 't'; break;
+        }
+        switch(mode) {
+            case 'bottom': m = m + 'low' + '/' + sn + '/' + aid; break;
+            case 'sidebar': m = m + '/' + sn + '/' + aid; break;
+        }
+
+        _gcpx.push(['ev', t, m]);
+
+        return true;
+    };
+}
+
+ 
+ 		 
+          Tools: 
+             Drucken 
+         
+     
+ 
+ 
+ 
+ 
+ Anzeige 
+ 
+// 
+ 
+     
+ 
+ 
+  
+ 
+
+ 
+      Stellenmarkt  
+     
+          IT-Administrator (m/w) - Schwerpunkt Client Service  
+
+            TQ-Systems GmbH, Seefeld
+         
+          Testanalyst / Tester (m/w)  
+
+            M-net Telekommunikations GmbH, M nchen
+         
+          Computer Systems Validation Officer (m/w)  
+
+            DENTSPLY DETREY GmbH, Konstanz
+         
+          Senior Consultant (m/w) Industrie Projektmanager  
+
+            ESG Consulting GmbH, F rstenfeldbruck (bei M nchen), Berlin
+         
+     
+       
+      Detailsuche  
+  
+ 
+ 
+     Folgen Sie uns 
+ 
+ 
+         
+         
+         
+         
+ 
+ 
+      
+ 
+   Videos   
+
+
+
+
+ 
+ 
+ 
+ Eyetracking mit Spritz 
+ 
+   
+     Verwandte Artikel 
+     
+     Opera 10 mit Turboschaltung und Seitenvorschau in Tableiste   
+   1 Milliarde Nutzer  Facebooks gr  te technische Errungenschaften   
+   Hadoop von Intel  1 TByte Daten in 7 Minuten statt 4 Stunden analysieren   
+   Apache Drill  Riesige Datenmengen werden schneller verarbeitet   
+   Spamwelle  Hack mit Happy End   
+     
+  
+ 
+ 
+     
+         Meistgelesen 
+         
+		     
+                                 
+                                 Virtual Reality 
+                 Im Holodeck gibt s keine Maus 
+                 
+             
+		     
+                                 
+                                 Cyanogenmod-M-Version 
+                 "Kreuzt nicht die Strahlen!" 
+                 
+             
+		     
+                                 
+                                 Jason Alleman 
+                 Tastatur aus Lego 
+                 
+             
+		     
+                                 
+                                 Verschl sselung 
+                 Validation von Threema ist wenig aussagekr ftig 
+                 
+             
+		     
+                                 
+                                 Intel NUC und Co. 
+                 Durchblick bei Mini-PCs 
+                 
+             
+         
+         
+      
+     
+             
+     Meistkommentiert 
+     
+   Verschl sselung: Validation von Threema ist wenig aussagekr ftig   Kommentare: 290 |  letzter Beitrag  14:06 Uhr  
+   Respawn Entertainment: Titanfall offenbar doch nicht mit 900p-Aufl sung   Kommentare: 174 |  letzter Beitrag  17:11 Uhr  
+   Secure Call: Merkelphone f r alle   Kommentare: 59 |  letzter Beitrag  16:58 Uhr  
+   Hexacopter: Taserdrohne vorgestellt   Kommentare: 59 |  letzter Beitrag  15:31 Uhr  
+   Archival Disc von Sony und Panasonic: Neue Archiv-Disc mit dem TByte als Ziel   Kommentare: 57 |  letzter Beitrag  16:49 Uhr  
+     
+      Mehr  
+  
+ 
+            
+    
+   
+      Ticker  
+     
+   Hitchhiker's Guide   HTML5-Version zum Geburtstag   
+   Open Pandora   Starcraft f r ARM-Handheld kompiliert   
+   Space Noir   Verschw rung im All   
+   Login-Dienst   Mozilla stellt Persona-Entwicklung ein   
+   Digitale Agenda   Die drei M nner von der Internet-Tankstelle   
+   Flatrate   GMX und Web.de machen De-Mail kostenlos   
+   ETH40G   Verschl sselung mit 40 Gigabit pro Sekunde   
+   BIU   46 Prozent der Deutschen spielen Computer- oder Videogames   
+   MSI   Erste Mainboards f r Haswell-Refresh und m.2-SSDs   
+   Mobilesitter   Intelligente Kennwortverwaltung f r Android   
+     
+  
+ 
+ 
+      Newsletter-Abo  
+     
+         
+         
+         
+         
+             E-Mail-Adresse: 
+             
+                 
+             
+             
+                 
+             
+         
+     
+  
+ 
+ 
+     Haben wir etwas  bersehen? 
+     E-Mail an  news@golem.de  
+  
+ 
+ 
+ 
+ Anzeige 
+ 
+// 
+ 
+     
+ 
+ 
+              
+
+             
+
+
+
+
+ 
+      Razer  
+    Razer   Neuer Ansatz f r Gaming-Tastaturen   
+     Mit dem Inneren der Tasten von Keyboards hat sich Razer besch ftigt - und neue Switches entwickelt, die vor allem f r Gamer optimiert sind. Aber auch f r andere PC-Nutzer d rften Details wie die lange Lebensdauer interessant sein. 
+     
+           Razer Project Christine  Mineral l, modular und m chtig ambitioniert  
+           Razer Nabu  Smartes Armband mit zwei Bildschirmen  
+     
+  
+ 
+
+
+
+ 
+      Internet der Dinge  
+    Relayr.io   Have a Wunderbar, have a break   
+     Golem.de hat Relayr.io besucht. Von den Gr ndern haben wir uns ihre Vorstellung vom Internet der Dinge erkl ren lassen - und das erste Projekt, den Wunderbar, in Augenschein genommen. 
+     
+           Internet der Dinge  Freescale zeigt ARM-Chip in Dimple-Gr  e  
+           Open Source  Selbst gebauter Thermostat   la Nest  
+           Scharfsch tzengewehr Smart Rifle  Das Internet der t dlichen Dinge  
+     
+  
+ 
+
+
+
+    
+
+        
+ 
+      Fritzbox  
+    AVM-Router   Exploit f r Fritzbox-L cke kursiert im Netz   
+     Wer seine Fritzbox noch nicht aktualisiert hat, sollte das schleunigst tun - im Netz kursieren Anleitungen, wie sich die Hintert r nutzen l sst. Dazu reicht schon das Aufrufen einer manipulierten Webseite, danach kann der Router  bernommen werden. 
+     
+           AVM  80 F lle von Telefonbetrug mit Fritzboxen  
+           Fritzbox-Hack  AVM r umt umfassendes Angriffsszenario ein  
+           Fritzbox-Hack  Sicherheitsl cke betrifft offenbar nicht nur Fernzugang  
+     
+  
+    
+        
+ 
+              
+
+             
+ 
+ 
+      Forumsbeitr ge    
+     
+    Flatrate  GMX und Web.de machen De-Mail kostenlos    Re: Moment mal! Was wollten die daf r?   Bigfoo29 | 17:25  
+    Mobilesitter  Intelligente Kennwortverwaltung f r Android    Re: Gibts dazu ne "App" f r Linux?   Tzven | 17:22  
+    Virtual Reality  Im Holodeck gibt s keine Maus    Re: Kinect?!   wmayer | 17:21  
+    Flatrate  GMX und Web.de machen De-Mail kostenlos    Re: De-Mail ist eine feine Sache f r Abmahner...   against | 17:20  
+    Brendan Eich  Browser als  berwachungsinstrument    Re: Warum verlegt Google wohl viele bis alle...   Tuxianer | 17:20  
+     
+  
+ 
+  
+      Ticker    
+     
+	         
+               Hitchhiker's Guide  HTML5-Version zum Geburtstag  
+             17:30 
+         
+	         
+               Open Pandora  Starcraft f r ARM-Handheld kompiliert  
+             17:23 
+         
+	         
+               Space Noir  Verschw rung im All  
+             16:32 
+         
+	         
+               Login-Dienst  Mozilla stellt Persona-Entwicklung ein  
+             16:27 
+         
+	         
+               Digitale Agenda  Die drei M nner von der Internet-Tankstelle  
+             16:01 
+         
+	         
+               Flatrate  GMX und Web.de machen De-Mail kostenlos  
+             15:55 
+         
+	         
+               ETH40G  Verschl sselung mit 40 Gigabit pro Sekunde  
+             15:50 
+         
+	         
+               BIU  46 Prozent der Deutschen spielen Computer- oder Videogames  
+             14:55 
+         
+	      
+  
+ 
+              
+
+          
+ 
+     
+          Home  
+          Ticker  
+          RSS  
+          API  
+          Forum  
+          Zusatzdienste  
+          Jobs  
+          Impressum  
+          Datenschutz  
+          Werbung  
+          Ansicht          
+          Nutzungsbasierte Onlinewerbung  
+            
+     
+     © 1997 2014  Golem.de . Alle Rechte vorbehalten. 
+  
+
+ 
+ 
+ 
+
+ 
+      
+     
+           
+             /     
+           
+     
+     
+           
+          
+           
+     
+ 
+
+  
+  
+ 
+ 
+$(document).ready(function() {
+Golem.Gallery2.init(function(event) {
+var e = event;
+});
+});
+ 
+
+ 
+  
+ 
+    DD_belatedPNG.fix('#header img, .list-articles li img, .forum .threads .dh2, .ticker .is-image, .ticker .is-video, .cluster-video a, .cluster-video figcaption span');
+ 
+ 
+  
+	  
+ 
+    
+   
+    
+       
+      0/00 
+       
+    
+   
+   
+      
+   
+   
+   
+   
+  
+ 
+ 
+ 
+ 
+ 
+ 
+// 
+ 
+ 
+ -1){try{new ActiveXObject("ShockwaveFlash.ShockwaveFlash");a=3}catch(c){a*=2}}else{if($("embed").length+$("object").length>0){a=2;$("object, embed").each(function(){if($(this).css("display")!=="none" });
+(function(d,n){
+  var g=d.createElement(n),s=d.getElementsByTagName(n)[0];
+  g.async=true; g.src='/staticrl/scripts/golem_cpxl_57-min.js';
+  s.parentNode.insertBefore(g,s);
+})(document,'script');
+});
+//-->
+ 
+ 
+ 
+  
+ 
+ 
+   
+
+  
+ 
