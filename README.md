@@ -8,13 +8,14 @@ Aufteilung
 
 Vorschlag:
 * Bases of MapReduce (history & basic explananation): Patrick ?
-* HDFS & GFS: ?
-* MapReduce Algorithms: ?
+* HDFS & GFS: TODO ?
+* MapReduce Algorithms: Erwin ?
 	- siehe Knowledge Map
-* MapReduce UseCases: ?
+* MapReduce UseCases: Ephraim ?
 	- siehe Knowledge Map
 	- weiter aufteilen?
 * Performance Optimizations: Erwin ?
 	- Slide Jeff Dean
-* Hadoop Ecosystem: ?
+* Hadoop Ecosystem: Kai ?
 	- siehe Knowledge Map
+	- Demo?
