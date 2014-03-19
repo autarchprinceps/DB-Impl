@@ -1,0 +1,14 @@
+
+ 
+     
+         Microsoft OneDrive - Access files anywhere. Create docs with free Office Online.         
+           
+         // -1)a=c.substr(b+1);return a},getHashUrl:function(){var c,e=window.location,a=e.href,b=a.indexOf($U.primaryAjaxDelimiter),d=b==-1?"":a.substr(b+1);if(d)c=$U.getNormalizedUrl(a,$U.primaryAjaxDelimiter);return c},getNormalizedUrl:function(a,c){c=c||$U.primaryAjaxDelimiter;var f="",e=$U.getAjaxIndex(a,c);if(e>-1){f=a.substr(e+1);a=a.substr(0,e)}var b="",d=a.indexOf($U.queryDelimiter);if(d>-1){b=a.substr(d+1);a=a.substr(0,d)}b=$U.serialize($U.deserialize(f?f:b));if(b)a=[a,$U.queryDelimiter,b].join("");a=a.replace(/[!]/g,"%21");return a},getAjaxIndex:function(a,d){var h=-1,c=a.indexOf(d);while(c!=-1){var b=c+1,e=a.indexOf(d,b),j=a.indexOf($U.pairDelimiter,b),k=a.indexOf($U.queryDelimiter,b),g=a.indexOf($U.keyValueDelimiter,b),i=[e,j,k,g].sort(function(a,b){return a==-1?1:b==-1?-1:a-b}),f=i[0];if(f==-1)break;else if(f==g){h=c;break}else c=e}return h},getCurrentUrl:function(){return $U.getHashUrl()||window.location.href},deserialize:function(f){var c={};if(f){var e=f.split($U.pairDelimiter),g=e.length,a=0;for(;a 0)a.pop();return a.join("")}}
+//]]> 
+        
+ // -1){h=a.substr(g+1);a=a.substr(0,g)}var b="",d=a.indexOf(f);if(d>-1){b=a.substr(d+1);a=a.substr(0,d)}b=s(r(h?h:b));if(b)a=[a,f,b].join("");a=a.replace(/[!]/g,"%21");return a};function r(h){var c={};if(h){var f=h.split(g),i=f.length,a=0;for(;a 0)a.pop();return a.join("")}if(!a.f)try{var c=a.getHashUrl()||a.ru;if(c){var h=document.location;try{if(b!=b.top){document.domain=a.d;if(c.indexOf("login."+a.d)>-1||c.indexOf("account."+a.d)>-1||c.indexOf(b.top.document.location.protocol)!=0)h=b.top.document.location}}catch(i){}if(a.isInternalUrl(c))h.replace(c)}}catch(i){}})();
+
+//]]> 
+
+     
+ 
