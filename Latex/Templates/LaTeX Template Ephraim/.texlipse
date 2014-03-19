@@ -1,0 +1,14 @@
+#TeXlipse project settings
+#Wed Feb 19 09:30:18 CET 2014
+markTmpDer=true
+builderNum=2
+outputDir=
+makeIndSty=StudienarbeitLeMon.ist
+bibrefDir=
+outputFormat=pdf
+tempDir=tmp
+mainTexFile=StudienarbeitLeMon.tex
+outputFile=StudienarbeitLeMon.pdf
+langSpell=de
+markDer=true
+srcDir=

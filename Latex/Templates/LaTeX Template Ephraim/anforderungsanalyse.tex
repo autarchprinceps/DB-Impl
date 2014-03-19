@@ -1,0 +1,332 @@
+\chapter{Anforderungsanalyse} 
+\section{Use-Cases} \label{sec:Use-Cases}
+
+% %Ideen für Spacing:
+% %\itemsep -5pt
+% %Vorlage:
+% \begin{table}[h]
+% 	\begin{tabular}{|p{3cm}|p{11.06cm}|}
+% 	\hline
+% 		\multicolumn{2}{|l|}{\textbf{UC Nr.} }   \\ \hline
+% 		\textbf{Name}                 &         \\ \hline
+% 		\textbf{Ziel im Kontext}      &         \\ \hline
+% 		\textbf{Akteure}              &         \\ \hline
+% 		\textbf{Trigger}              &         \\ \hline
+% 		\textbf{Essenzielle Schritte} & 
+% 			\begin{enumerate}
+% 			  \item sdf
+% 			  \item 
+% 			\end{enumerate}
+% 		\\ \hline
+% 		\textbf{Erweiterungen} 		  &         \\ \hline
+% 	\end{tabular}
+% \end{table}\FloatBarrier
+% 
+% \begin{table}[h]
+% 	\begin{tabular}{|p{3cm}|p{11.06cm}|}
+% 	\hline
+% 		\textbf{Zugehöriger Use Case}                 &         \\ \hline
+% 		\textbf{Beteiligte Tabellen}      &         \\ \hline
+% 		\textbf{Vorbedingung}              &         \\ \hline
+% 		\textbf{Ablauf}              &   
+% 			\begin{enumerate}
+% 			  \item sdf
+% 			  \item 
+% 			\end{enumerate}
+% 		\\ \hline
+% 		\textbf{Erweiterungen}              &         \\ \hline
+% 	\end{tabular}
+% \end{table}\FloatBarrier
+
+\begin{table}[h] 
+\subsection{UC1: Frage mit Musterlösungen anlegen}
+	\begin{tabular}{|p{3cm}|p{11.06cm}|}
+	\hline
+		\multicolumn{2}{|l|}{\textbf{UC Nr.: UC1} }   \\ \hline
+		\textbf{Name}                 &      Frage mit Musterlösungen anlegen   \\ \hline
+		\textbf{Ziel im Kontext}      &      Dozent legt eine neue Frage mit ihrer Musterlösung an   \\ \hline
+		\textbf{Akteure}              &      Dozent (D.)   \\ \hline
+		\textbf{Trigger}              &      D. klickt auf "`Frage anlegen"'   \\ \hline
+		\textbf{Essenzielle Schritte} & 			
+			\begin{enumerate}
+			  \item D. befindet sich im Admin Bereich
+			  \item D. klickt auf „Frage anlegen“
+			  \item D. sieht Web Interface zum Frage erstellen
+			  \item	D. wählt den Fragentyp aus einer Auswahlmöglichkeit aus
+			  \item D. wählt die Kategorie für die Frage aus einer Auswahlmöglichkeit aus
+			  \item D. gibt Frage in das dazu passende Feld ein
+			  \item D. gibt die zur Frage passende/n Musterlösung/en in das/die passende/n Feld/er ein
+			  \item D. klickt abschließend auf „Abschicken“
+			\end{enumerate}			
+		\\ \hline
+		\textbf{Erweiterungen} 		  &   4a. D. gibt an wie viele Antworten für Auflistaufgaben gefordert werden     \\ \hline
+	\end{tabular}
+\end{table}\FloatBarrier
+
+\begin{table}[h]
+	\begin{tabular}{|p{3cm}|p{11.06cm}|}
+	\hline
+		\textbf{Zugehöriger Use Case}                 &    UC1     \\ \hline
+		\textbf{Beteiligte Tabellen}      &     Question, Type, Category, Solution    \\ \hline
+		\textbf{Vorbedingung}              &     Alle benötigten Daten wurden eingegeben    \\ \hline
+		\textbf{Ablauf}              &   
+			\begin{enumerate}
+			  \item Es wurden schon beim Aufrufen des „Frage erstellen“ Formular, die Kategorien und Typen mit ihren IDs geladen
+			  \item Beim abschicken des Formulars wird ein neuer Eintrag in die Tabelle „Question“ erstellt mit einer automatisch hochzählenden ID (qID), der Kategorie (cID) und Typen (tID) ID, dem jetzigen Datum mit Uhrzeit (creationDate und lastEditedDate), und der eigentlichen Frage (text).
+			  \item Die dazu gehörigen Antworten werden in die „Solution“ Tabelle gespeichert mit einer automatisch hochzählenden unique ID (sID), der dazu gehörigen Fragen ID (qID), der Antwort selbst (text) und ob es sich um eine korrekte oder falsche Antwort handelt (correct) [wichtig für Multiple Choice]
+			\end{enumerate}
+		\\ \hline
+		\textbf{Erweiterungen}              &        \\ \hline
+	\end{tabular}
+\end{table}\FloatBarrier
+
+
+\begin{table}
+\subsection{UC2: Kategorie anlegen}
+	\begin{tabular}{|p{3cm}|p{11.06cm}|}
+	\hline
+		\multicolumn{2}{|l|}{\textbf{UC Nr.: UC2} }   \\ \hline
+		\textbf{Name}                 &     Kategorie anlegen   \\ \hline
+		\textbf{Ziel im Kontext}      &     Dozent legt eine neue Kategorie an   \\ \hline
+		\textbf{Akteure}              &     Dozent (D.)    \\ \hline
+		\textbf{Trigger}              &     D. klickt auf „Kategorie anlegen“    \\ \hline
+		\textbf{Essenzielle Schritte} & 
+			\begin{enumerate} 
+			  \item D. befindet sich im Admin Bereich
+			  \item D. klickt auf „Kategorie anlegen“
+			  \item D. sieht Web Interface zum Kategorien erstellen
+			  \item D. gibt den Namen der Kategorie in das dazu passende Feld ein
+			  \item	D. klickt abschließend auf den „Plus“-Button
+			\end{enumerate}
+		\\ \hline
+		\textbf{Erweiterungen} 		  &         \\ \hline
+	\end{tabular}
+\end{table}\FloatBarrier
+
+\begin{table}[h]
+	\begin{tabular}{|p{3cm}|p{11.06cm}|}
+	\hline
+		\textbf{Zugehöriger Use Case}                 &     UC2    \\ \hline
+		\textbf{Beteiligte Tabellen}      &     Category    \\ \hline
+		\textbf{Vorbedingung}              &    Alle benötigten Daten wurden eingegeben     \\ \hline
+		\textbf{Ablauf}              &    Beim Abschicken des Formulars wird in der Tabelle „Category“ ein neuer Eintrag erstellt mit automatisch hochzählender ID (cID) und dem Namen der Kategorie (cName)
+		\\ \hline
+		\textbf{Erweiterungen}              &         \\ \hline
+	\end{tabular}
+\end{table}\FloatBarrier
+
+\begin{table}[h]
+\subsection{UC3: Vorlesung anlegen}
+	\begin{tabular}{|p{3cm}|p{11.06cm}|}
+	\hline
+		\multicolumn{2}{|l|}{\textbf{UC Nr.: UC3} }   \\ \hline
+		\textbf{Name}                 &     Vorlesung anlegen    \\ \hline
+		\textbf{Ziel im Kontext}      &     Dozent legt eine neue Vorlesung an   \\ \hline
+		\textbf{Akteure}              &     Dozent (D.)    \\ \hline
+		\textbf{Trigger}              &     D. klickt auf „Vorlesung anlegen“    \\ \hline
+		\textbf{Essenzielle Schritte} & 
+			\begin{enumerate}
+			  \item D. befindet sich im Admin Bereich
+			  \item D. klickt auf „Vorlesung anlegen“
+			  \item D. sieht Web Interface zum Vorlesungen anlegen
+			  \item D. gibt den Namen der Vorlesung in das dazu passende Feld ein
+			  \item D. klickt abschließend auf den „Plus“-Button
+			\end{enumerate}
+		\\ \hline
+		\textbf{Erweiterungen} 		  &         \\ \hline
+	\end{tabular}
+\end{table}\FloatBarrier
+
+\begin{table}[h]
+	\begin{tabular}{|p{3cm}|p{11.06cm}|}
+	\hline
+		\textbf{Zugehöriger Use Case}                 &    UC3     \\ \hline
+		\textbf{Beteiligte Tabellen}      &     Lecture    \\ \hline
+		\textbf{Vorbedingung}              &    Alle benötigten Daten wurden eingegeben     \\ \hline
+		\textbf{Ablauf}              &   Beim Abschicken des Formulars wird in der Tabelle „Lecture“ ein neuer Eintrag erstellt mit automatisch hochzählender ID (cID) und dem Namen der Vorlesung (lName) \\ \hline
+		\textbf{Erweiterungen}              &         \\ \hline
+	\end{tabular}
+\end{table}\FloatBarrier
+
+\begin{table}[h]
+\subsection{UC4: Arbeitsblatt anlegen}
+	\begin{tabular}{|p{3cm}|p{11.06cm}|}
+	\hline
+		\multicolumn{2}{|l|}{\textbf{UC Nr.: UC4} }   \\ \hline
+		\textbf{Name}                 &     Arbeitsblatt anlegen    \\ \hline
+		\textbf{Ziel im Kontext}      &     Dozent legt ein neues Arbeitsblatt an    \\ \hline
+		\textbf{Akteure}              &     Dozent (D.)    \\ \hline
+		\textbf{Trigger}              &     D. klickt auf „Arbeitsblatt anlegen“    \\ \hline
+		\textbf{Essenzielle Schritte} & 
+			\begin{enumerate}
+			  \item D. befindet sich im Admin Bereich
+			  \item D. klickt auf „Arbeitsblatt anlegen“
+			  \item D. sieht Web Interface zum Erstellen eines Arbeitsblattes
+			  \item D. gibt den Namen des Arbeitsblattes in das dazu passende Feld ein
+			  \item D. erhält Übersicht aller Fragen mit Checkbox zum Auswählen mit Filtermöglichkeit
+			  \item D. sieht eine extra Tabelle mit den bisher ausgewählten Fragen
+			  \item D. klickt nach Hinzufügen aller gewünschten Fragen auf „Arbeitsblatt anlegen“, wenn alle gewünschten Fragen hinzugefügt wurden
+			\end{enumerate}
+		\\ \hline
+		\textbf{Erweiterungen} 		  &   6a. D. kann die Reihenfolge der Fragen verändern oder sie wieder entfernen      \\ \hline
+	\end{tabular}
+\end{table}\FloatBarrier
+
+\begin{table}[h]
+	\begin{tabular}{|p{3cm}|p{11.06cm}|}
+	\hline
+		\textbf{Zugehöriger Use Case}                 &    UC4     \\ \hline
+		\textbf{Beteiligte Tabellen}      &    ExcerciseSheet, SheetQuestions     \\ \hline
+		\textbf{Vorbedingung}              &    Alle benötigten Daten wurden eingegeben     \\ \hline
+		\textbf{Ablauf}              &   
+			\begin{enumerate}
+			  \item Beim Abschicken des Formulars mit dem Button „Arbeitsblatt anlegen“ wird in der Tabelle „ExcerciseSheet“ ein neuer Eintrag erstellt mit automatisch hochzählender unique ID (esID), dem Namen des Arbeitsblattes (esName) und dem Zeitpunkt der Erstellung (esDateTime)
+			  \item In der Tabelle SheetQuestions wird für jede, dem Arbeitsblatt hinzugefügte, Frage ein Eintrag mit der esID und der ID der hinzugefügten Frage (qID)  eingefügt.
+			\end{enumerate}
+		\\ \hline
+		\textbf{Erweiterungen}              &     Einstellen, wie lange Arbeitsblatt valid ist -> theoretisch auch über Button „aktiv machen“ und „sperren“ möglich.    \\ \hline
+	\end{tabular}
+\end{table}\FloatBarrier
+
+
+\begin{table}[h]
+\subsection{UC5: Antworten abschicken}
+	\begin{tabular}{|p{3cm}|p{11.06cm}|}
+	\hline
+		\multicolumn{2}{|l|}{\textbf{UC Nr.: UC5} }   \\ \hline
+		\textbf{Name}                 &     Antworten abschicken    \\ \hline
+		\textbf{Ziel im Kontext}      &     Studenten schicken Antworten ab    \\ \hline
+		\textbf{Akteure}              &     Student (S)    \\ \hline
+		\textbf{Trigger}              &     S. klickt auf „Antworten abschicken“    \\ \hline
+		\textbf{Essenzielle Schritte} & 
+			\begin{enumerate}
+			  \item S. befindet sich im Studenten-Bereich
+			  \item S. klickt auf „Antworten abschicken“
+			  \item S. sieht Bestätigungsdialog
+			  \item S. klickt auf „OK“
+			  \item S. sieht Bestätigungsdialog
+			\end{enumerate}
+		\\ \hline
+		\textbf{Erweiterungen} 		  &   4a. S. klickt auf "`Abbrechen"' und schickt somit seine Antworten noch nicht ab     \\ \hline
+	\end{tabular}
+\end{table}\FloatBarrier
+
+\begin{table}[h]
+	\begin{tabular}{|p{3cm}|p{11.06cm}|}
+	\hline
+		\textbf{Zugehöriger Use Case}                 &     UC5    \\ \hline
+		\textbf{Beteiligte Tabellen}      &     Questions, StudentAnswer, Solution, StudentText    \\ \hline
+		\textbf{Vorbedingung}              &    Alle benötigten Daten wurden eingegeben     \\ \hline
+		\textbf{Ablauf}              &   
+			\begin{enumerate}
+			  \item Bei jeder gegebenen Antwort wird überprüft, ob es sich um eine Multiple-Choice-Frage oder um eine Freitext-Frage handelte (anhand der cID aus der Questions-Tabelle)
+			  \item Abhängig von Fragetyp
+			  \begin{enumerate}
+			    \item Es handelt sich um eine Multiple-Choice-Antwort:
+			    	\begin{enumerate}
+					    \item Es wird in der Tabelle StudentAnswer ein Eintrag mit einer fortlaufenden ID (saID), der ID des Arbeitsblattes (esID), der VorlesungsID (lID), der FragenID (qID), der AntwortID (sID in der Spalte text), der SessionID seiner aktuellen Session und dem aktuellen Datum (dateTime) hinzugefügt
+			  		\end{enumerate}
+			  	\item Es handelt sich um eine Aufzähl-Antwort:
+			    	\begin{enumerate}
+					    \item Es wird in der Tabelle StudentAnswer ein Eintrag mit einer fortlaufenden ID (saID), der ID des Arbeitsblattes (esID), der VorlesungsID (lID), der FragenID (qID), dem Antworttext (text), der SessionID seiner aktuellen Session und dem aktuellen Datum (dateTime) hinzugefügt
+			  		\end{enumerate}
+			    \item Es handelt sich um eine Freitext-Antwort
+				    \begin{enumerate}
+					    \item In die Tabelle StudentText wird ein Eintrag mit einer fortlaufenden ID (stID), dem Text der Antwort, der ArbeitsblattID (esID), der VorlesungsID (lID), der FragenID (qID) und dem aktuellen Datum (dateTime) hinzugefügt.
+				 	 \end{enumerate}
+			  \end{enumerate}
+			\end{enumerate}
+		\\ \hline
+		\textbf{Erweiterungen}              &         \\ \hline
+	\end{tabular}
+\end{table}\FloatBarrier
+
+
+\begin{table}[h]
+\subsection{UC6: Auswertung des Übungsblattes}
+	\begin{tabular}{|p{3cm}|p{11.06cm}|}
+	\hline
+		\multicolumn{2}{|l|}{\textbf{UC Nr.: UC6} }   \\ \hline
+		\textbf{Name}                 &     Auswertung des Arbeitsblattes    \\ \hline
+		\textbf{Ziel im Kontext}      &     Dozent wertet Arbeitsblatt aus   \\ \hline
+		\textbf{Akteure}              &     Dozent (D)    \\ \hline
+		\textbf{Trigger}              &     D. klickt auf „Auswertung“    \\ \hline
+		\textbf{Essenzielle Schritte} & 
+			\begin{enumerate}
+			  \item D. befindet sich im Admin-Bereich
+			  \item D. klickt auf „Auswertung“
+			  \item D. sieht Übersicht der verschiedenen Vorlesungen und Arbeitsblättern
+			\end{enumerate}
+		\\ \hline
+		\textbf{Erweiterungen} 		  &         \\ \hline
+	\end{tabular}
+\end{table}\FloatBarrier
+
+\begin{table}
+	\begin{tabular}{|p{3cm}|p{11.06cm}|}
+	\hline
+		\textbf{Zugehöriger Use Case}                 &     UC6    \\ \hline
+		\textbf{Beteiligte Tabellen}      &    SheetQuestions, Question, StudentAnswer, StudentText     \\ \hline
+		\textbf{Vorbedingung}              &         \\ \hline
+		\textbf{Ablauf}              &   
+			\begin{enumerate}
+			  \item Zu jeder der Vorlesung und dem ausgewählten Arbeitsblatt werden die zugehörigen Fragen abgerufen.
+			  \item Abhängig von Fragetyp
+			  \begin{enumerate}
+			    \item Es handelt sich um eine Multiple-Choice-Antwort:
+				    \begin{enumerate}
+					    \item Aus der Tabelle „studentAnswer“ werden nacheinander alle zur in der Vorlesung (lID) und dem Arbeitsblatt zugehörigen (esID) Frage (qID) die Antworten abgerufen und prozentual dargestellt, wie viele korrekt, falsch und nicht beantwortet wurden.
+				 	\end{enumerate}
+			    \item Es handelt sich um eine Freitext-Antwort
+				    \begin{enumerate}
+					   	\item Aus der Tabelle studentText werden zehn zufällige Antworten ausgewählt und nacheinander präsentiert.
+				  	\end{enumerate}
+			  \end{enumerate}
+			\end{enumerate}
+		\\ \hline
+		\textbf{Erweiterungen}              &    Anzahl der ausgegebenen Freitext-Antworten variabel machen     \\ \hline
+	\end{tabular}
+\end{table}\FloatBarrier
+
+\section{Allgemeine Anforderungen}
+Die an das Projekt gestellten Anforderungen gliedern sich in zwei Gebiete:
+Technologische Anforderungen und allgemeine Anforderungen, die an die
+Applikation gestellt werden. Soweit möglich sollte bei der Datenhaltung
+Synergie-Effekte mit dem Projekt "`CCKE"' benutzt werden. Ebenso sollte der
+Bereich für Lehrbeauftragte für die Erstellung und Verwaltung und Präsentation
+der Ergebnisse weit möglichst für beide Projekte einheitlich gehalten werden.
+
+\section{Technologische Anforderungen}
+Die zu entwickelnde Applikation sollte auf Basis von Webtechnologien aufgebaut
+werden. Desweiteren sollte das Backend für Lehrbeauftragte sowie die Auswertung
+der Ergebnisse an einem Notebook bedient werden können. Die Oberfläche für die
+Auswertung der Antworten sollte dabei so optimiert sein, dass die Ergebnisse
+ohne größeren Aufwand mittels einem im Raum vorhandenen Beamer präsentiert
+werden können.  \newline
+Die Oberfläche für die Eingabe der Antworten der Studenten sollte dabei für
+mobile Geräte optimiert werden, was insbesondere Smartphones und Tablets
+beinhalten sollte. Die Optimierung für mobile Geräte sollte die Bedienbarkeit
+für verbreitete mobile Platformen sicherstellen. \newline
+Die gesamte Datenhaltung der Applikation sollte mit Hilfe einer frei verfügbaren
+Datenbank realisiert werden. 
+
+\section{Eingesetzte Technologien}
+Bei der Auswahl der Technologien wurde insbesondere Wert darauf gelegt, dass die
+Grundlagen für diese den Studenten bereits bekannt sind. Allerdings sollten auch
+neue Aspekte unter  zuhilfenahme moderner Ansätze und Frameworks erlernt und so
+die Grundlage für eine spätere Erweiterung des Projekts durch nachfolgende
+Gruppen sichergestellt werden.
+
+Nachfolgend eine Auflistung der eingesetzten Technologien:
+\begin{singlespacing}
+  \begin{multicols}{3}
+\begin{itemize}
+  \item HTML
+  \item CSS
+  \item JavaScript
+  \item AJAX
+  \item PHP
+  \item SQL
+\end{itemize}
+\end{multicols}
+\end{singlespacing}
