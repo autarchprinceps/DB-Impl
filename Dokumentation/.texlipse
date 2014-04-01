@@ -1,5 +1,5 @@
 #TeXlipse project settings
-#Wed Feb 19 09:30:18 CET 2014
+#Tue Apr 01 21:21:02 CEST 2014
 markTmpDer=true
 builderNum=2
 outputDir=
@@ -7,8 +7,8 @@ makeIndSty=StudienarbeitLeMon.ist
 bibrefDir=
 outputFormat=pdf
 tempDir=tmp
-mainTexFile=StudienarbeitLeMon.tex
-outputFile=StudienarbeitLeMon.pdf
-langSpell=de
+mainTexFile=DB_Impl_Dokumentation.tex
+outputFile=DB_Impl_Dokumentation.pdf
+langSpell=en
 markDer=true
 srcDir=
