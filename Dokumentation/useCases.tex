@@ -1,4 +1,4 @@
-\section{Use Cases}
+\chapter{Use Cases}
 As MapReduce is an important paradigm for solving big and costly problems today, there are really
 many use cases. Almost every problem that can be divided into small pieces and processed independent
 can be distributed and calculated in parallel by following the MapReduce paradigm. Not only
@@ -46,15 +46,42 @@ Reduce paradigm, these costs could be significantly reduced. Maybe in some years
 normal thing to analyses the genomes of a person? - The technic is ready to do so. The bigger
 question is: Are the people willing to do that?
 
+\begin{figure} [!htb]
+	\begin{center}
+		  \begin{tabular}{@{}r@{}}
+		{\includegraphics[width=14cm]{images/genome.jpg}}\\
+		\footnotesize\sffamily\textbf{Source:} \url{http://www.medcitynews.com}
+	  		   \cite{genomePicture} 
+ 	 	 \end{tabular}
+		\caption{Picture of a genome}
+		\label{fig:genome}
+	\end{center}
+\end{figure}\FloatBarrier
+
+Factorization of big integers is a very interesting but also a dangerous use case. Many security and
+cryptographic methods are based on the problem that it is not possible to efficiently factorize big
+integers. Map Reduce is a way to solve some factorization problems. But if someone could find a
+really efficient way (much more efficient than Map Reduce), this would lead to new challenges in
+cryptography.
+
+Search engine companies like Google do have a big need for indexing huge amount of data to give
+their users the best and most relevant search results in the shortest possible time. It is hardly
+surprising that Google as the market leader and inventor of MapReduce uses MapReduce to do that job
+while it is highly parallelizable. Google also uses the same techniques for indexing Emails in
+Gmail.
+
+Friend finders were a revolutionary new thing for social networks. Companies.  With Facebook’s
+friend finder leading the way big social networks implemented better search engines for people who
+are searching for their friends. A large amount of data has to be analyzed to give good suggestions
+for possible friends. Indexing profiles and searching for people can be highly parallelized.
+Facebook implemented its friend finder by using the MapReduce pattern.
 
 \begin{figure} [!htb]
 	\begin{center}
 		  \begin{tabular}{@{}r@{}}
-		{\includegraphics[width=14cm]{images/dhbw-Logo.png}}\\
-		\footnotesize\sffamily\textbf{Quelle:} DHBW-Homepage
-	  		   \cite{LiteraturEintrag1}
+		{\includegraphics[width=14cm]{images/FacebookfriendFinder.png}}\\
  	 	 \end{tabular}
-		\caption{Das DHBW-Logo}
-		\label{fig:DHBWLogo}
+		\caption{Facebooks friend finder}
+		\label{fig:friendFinder}
 	\end{center}
 \end{figure}
