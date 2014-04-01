@@ -1,0 +1,272 @@
+\documentclass[
+ pdftex, 
+ oneside, % Einseitiger Druck.
+ 12pt, % Schriftgroesse
+ parskip=half, % Halbe Zeile Abstand zwischen Absätzen.
+ headsepline, % Linie nach Kopfzeile.
+ %footsepline, % Linie vor Fusszeile.
+ abstracton % Abstract Überschriften
+%  ngerman % Translator
+]{scrreprt}  
+ 
+%Seitenränder:
+\usepackage[ 
+	top=25mm, 
+	left=30mm, 
+	right=25mm, 
+	bottom=32mm,
+	headsep=10mm, 
+	footskip=15mm
+	]{geometry} 
+	
+\usepackage{lscape}
+	
+
+%Seite von oben bis unten füllen und ggf. Abstände minimalst dehnen	
+
+%\usepackage{fullpage} %Seitengroesse
+\usepackage[activate]{microtype} %Zeilenumbruch und mehr
+
+% Zeichencodierung:
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+  
+\usepackage[onehalfspacing]{setspace} % Zeilenabstand
+\usepackage{makeidx} % Index-Erstellung
+\usepackage[ngerman]{babel} % Lokalisierung (neue deutsche Rechtschreibung)
+\usepackage[babel,german=quotes]{csquotes} % deutsche Anführungszeichen
+
+\usepackage{graphicx} % Grafiken
+%Grafiken immer im selben Kapitel einfügen wo sie referenziert werden
+\usepackage{placeins} 
+
+% einfachere Querverweise mit Seitenangabe usw.:
+\usepackage{prettyref}
+\newrefformat{cha}{Kapitel~\ref{#1} auf Seite~\pageref{#1}}  % Für Kapitel 
+\newrefformat{sec}{Abschnitt~\ref{#1} auf Seite~\pageref{#1}} % Für Abschnitte
+\newrefformat{fig}{Abbildung~\ref{#1} auf Seite~\pageref{#1}}% Für Abbildungen
+\newrefformat{tab}{Tabelle~\ref{#1} auf Seite~\pageref{#1}}	 % Für Tabellen
+\newrefformat{lst}{Quellcode~\ref{#1} auf Seite~\pageref{#1}} % für Quellcodeliings 
+\newrefformat{uc}{auf Seite~\pageref{#1}} % für Use-Cases 
+ 
+%merhspaltige Elemente möglich machen
+\usepackage{multicol} 
+
+%Mathe-Zeugs und Text-Anordnung
+\usepackage{amsmath}
+\usepackage{amssymb} 
+
+%serifenlose Schriftart:
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{sfmath}
+
+\usepackage{float}
+\restylefloat{table}
+   
+% Spezielle Tabellenform fuer Deckblatt
+\usepackage{longtable}
+\setlength{\tabcolsep}{10pt} %Abstand zwischen Spalten
+\renewcommand{\arraystretch}{1.5} %Zeilenabstand
+
+% Farben
+\usepackage{color}
+\definecolor{LinkColor}{rgb}{0,0,0.5}
+\definecolor{ListingBackground}{rgb}{0.92,0.92,0.92}
+
+%Farben in Tabellen nutzen
+\usepackage{colortbl}
+\definecolor{light-gray}{gray}{0.80}
+
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000 
+
+% Quellcode
+\usepackage{listings}
+\usepackage{scrhack} %bessere Integration in KOMA-Script, Warning wegbekommen
+\definecolor{javared}{rgb}{0.6,0,0} % for strings
+\definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
+\definecolor{javapurple}{rgb}{0.5,0,0.35} % keywords
+\definecolor{javadocblue}{rgb}{0.25,0.35,0.75} % javadoc
+
+\lstset{
+	language=Java, % Sprache des Quellcodes
+	numbers=left, % Zelennummern links
+	stepnumber=1, % Jede Zeile nummerieren.
+	numbersep=5pt, % 5pt Abstand zum Quellcode
+	lineskip=1pt, % Zeilenabstand im Quellcode
+	numberstyle=\tiny, % Zeichengrösse 'tiny' für die Nummern.
+	breaklines=true, % Zeilen umbrechen wenn notwendig.
+	breakautoindent=true, % Nach dem Zeilenumbruch Zeile einrücken.
+	postbreak=\space, % Bei Leerzeichen umbrechen.
+	tabsize=2, % Tabulatorgrösse 2
+	basicstyle=\ttfamily\footnotesize, % Nichtproportionale Schrift, klein für den Quellcode
+	showspaces=false, % Leerzeichen nicht anzeigen.
+	showstringspaces=false, % Leerzeichen auch in Strings ('') nicht anzeigen.
+	%basicstyle=\ttfamily, 
+	morekeywords={var, function},
+	keywordstyle=\color{javapurple}\bfseries,
+	stringstyle=\color{javared},
+	commentstyle=\color{javagreen},
+	morecomment=[s][\color{javadocblue}]{/**}{*/},
+	backgroundcolor=\color{ListingBackground}, % Hintergrundfarbe des Quellcodes
+	% setzen.
+	captionpos=b, % sets the caption-position to bottom
+	%extendedchars=true, % Alle Zeichen vom Latin1 Zeichensatz anzeigen.
+    literate={ö}{{\"o}}1 %deutsche Sonderzeichen auch in Listings
+    		 {Ö}{{\"O}}1 %funktionierend machen durch escapen
+         	 {Ü}{{\"U}}1
+         	 {ü}{{\"u}}1
+         	 {Ä}{{\"A}}1
+         	 {ä}{{\"a}}1
+         	 {ß}{{\ss}}1
+}
+\renewcommand{\lstlistlistingname}{Quellcodeverzeichnis}
+\renewcommand{\lstlistingname}{Quellcode}
+
+%Glossar-Einträge konfigurieren:
+\usepackage[
+	nonumberlist, %keine Seitenzahlen anzeigen
+	%acronym,      %ein separates Abkürzungsverzeichnis erstellen
+	toc,          %Einträge im Inhaltsverzeichnis
+	section]      %im Inhaltsverzeichnis auf section-Ebene erscheinen
+{glossaries}
+\glsenablehyper   %Abkürzungen ins Glossar verlinken
+\renewcommand*{\glspostdescription}{} %Punkt nach Beschreibung deaktivieren
+
+%Wort aus Glossar bei erster Verwendung hervorheben
+\defglsdisplayfirst{\emph{#1}} 
+\defglsdisplayfirst[acronym]{\emph{#1}} 
+ 
+ 
+%Literaturverzeichnis formatieren
+\bibliographystyle{plaindin} %Literaturverzeichnis nach DIN-Norm darstellen
+  
+% Verschiedene Schriftarten
+%\usepackage{goudysans}
+%\usepackage{lmodern}
+%\usepackage{libertine}
+\usepackage{palatino} 
+
+\input{myInformation.tex}
+ 
+%URl-Umbrüche auch an Bindestrichen für lange URLs erlauben
+ \usepackage[hyphens]{url}
+% set colors for links and URLs und URLs nicht escapen
+\usepackage[
+	colorlinks=true, 
+    urlcolor=blue,
+    linkcolor=black,
+    citecolor=black,
+    filecolor=black,
+    %menuecolor=black,
+    pdftitle={\pdftitel},
+	pdfauthor={\autor},
+	pdfsubject={\pdfsubject},
+	pdfcreator={pdflatex, LaTeX with KOMA-Script},
+	pdfpagemode=UseOutlines, % Beim Oeffnen Inhaltsverzeichnis anzeigen
+	pdfdisplaydoctitle=true, % Dokumenttitel statt Dateiname anzeigen.
+	pdflang=de % Sprache des Dokuments.
+	]{hyperref} % Hyperlinks als solche machen
+
+% Fußnoten
+\usepackage[
+	perpage, %Fußnoten-Nummerierung auf jeder Swite neu beginnen
+	hang,	 %Abstand zwischen Zahl und Text in der Fußnote 
+	multiple, 
+	stable]  %Fußn. in Überschriften anzeigen, aber nicht im Inhaltsverzeichnis
+{footmisc}
+
+
+\input{headerinclude.tex}
+%Abkürzungen
+\input{glossar.tex}
+%\input{header.tex}
+
+%Glossar-Befehle anschalten
+\makeglossaries
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document} 
+
+\cleardoublepage{}
+ 
+% Deckblatt 
+\input{deckblatt.tex}
+\input{erklaerung.tex}
+\input{abstract}
+\input{vorwort.tex}
+\glsresetall
+\renewcommand{\baselinestretch}{1.50}\normalsize
+%\input{vorwort}
+\tableofcontents 
+\glsresetall 
+\input{einleitung.tex}
+\input{anforderungsanalyse.tex}
+\input{vorueberlegungen.tex}
+\input{implementierung.tex}
+\input{fazit.tex}
+ 
+
+% Anhang
+\chapter{Anhang} 
+\clearpage
+\pagenumbering{Roman}
+
+%Glossar ausgeben
+\printglossary[ 
+	%%style=indexgroup,
+	title=Glossar,
+	toctitle=Glossar]
+    
+%   separates Abkürzungsverzeichnis ausgeben  
+%   \printglossary[
+%   	style=indexgroup,
+%   	type=\acronymtype, 
+%   	title =Abkürzungsverzeichnis,
+%		toctitle=Abkürzungsverzeichnis]
+
+% Abbildungsverzeichnis
+\clearpage
+
+%Quellcode-Anhang
+%\cleardoublepage
+%\phantomsection \label{listofCode}
+%\addcontentsline{toc}{section}{Quellcode1}
+%\clearpage
+
+
+\phantomsection \label{listoffig}
+\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+\listoffigures
+
+%Tabellenverzeichnis
+\cleardoublepage
+\phantomsection \label{listoftab}
+\addcontentsline{toc}{section}{Tabellenverzeichnis}
+\listoftables 
+ 
+% Quellcodeverzeichnis
+\cleardoublepage
+\phantomsection \label{listoflist} 
+\addcontentsline{toc}{section}{Quellcodeverzeichnis}
+\lstlistoflistings
+
+% im Literaturverzeichnis alles anzeigen, auch die die man nicht verwendet hat 
+% \nocite{*} 
+% Literaturverzeichnis (durch BibTeX erstellt)
+
+\interlinepenalty=10000 %Seitenumbrüche in einzelnen Einträgen im
+% Literaturverzeichnis vermeiden
+\bibliography{literaturverzeichnis}{}
+\clearpage
+
+% leere Seite am Ende einfügen
+%\thispagestyle{empty}
+%\textbf{ }
+%\cleardoublepage
+
+
+\end{document} 
