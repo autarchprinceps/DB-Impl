@@ -1,5 +1,5 @@
 #!/bin/bash
-NAME=StudienarbeitLeMon
+NAME=DB_Impl_Dokumentation
 
 bibtex $NAME
 pdflatex -interactive=nonstopmode $NAME.tex

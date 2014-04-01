@@ -1,0 +1,60 @@
+\section{Use Cases}
+As MapReduce is an important paradigm for solving big and costly problems today, there are really
+many use cases. Almost every problem that can be divided into small pieces and processed independent
+can be distributed and calculated in parallel by following the MapReduce paradigm. Not only
+scientific calculation, but also today’s companies are trying to solve their problems by using Map
+Reduce.
+
+The following shows an exemplary list of problems that can be efficiently solved by MapReduce:
+\begin{singlespacing}
+	\begin{itemize}
+	  \item Factorization of (big) Integers (Quelle: https://code.google.com/p/mapreduce-integer-factorization/) 
+	  \item Matrix factorization (Quelle: http://www.redaktion.tu-berlin.de/fileadmin/fg131/Publikation/Papers/sys024-schelter.pdf) 
+	  \item Multiplying terabit integers (Quelle: https://people.apache.org/~szetszwo/ssmr20110430.pdf)
+	  \item Fourier transformations
+	  \item Genetic analysis (Quelle: http://genome.cshlp.org/content/20/9/1297.long) 
+	  \item Search engine indexing
+	  \item Big sort problems (Quelle: http://courses.cs.washington.edu/courses/cse490h/08au/lectures/algorithms.pdf) 
+	  \item Users' behavior analytics
+	  \item Group text documents into topically related groups
+	  \item ETL and Data Mining
+	  \item Friend finder
+	  \item Defending E-Mail-Spam (Yahoo Mail: http://readwrite.com/2010/05/24/map-reduce-yahoo-mail#awesm=~ozyRktADsuJsXT) 
+	  \item Shortest Path (Quelle: http://courses.cs.washington.edu/courses/cse490h/08au/lectures/algorithms.pdf)  
+	  \item Word count (Quelle: http://courses.cs.washington.edu/courses/cse490h/08au/lectures/algorithms.pdf) 
+	  \item Weather prediction
+	\end{itemize}
+\end{singlespacing}
+
+Some of these use cases are more scientific, others are for commercial use. Especially while data
+warehouses are rising, there is a need for calculating big data. When data is filled into the data
+ware house, there are often calculations to be done like calculating aggregations. This can be
+efficiently done by using Map Reduce. When data is already filled inside the data ware house, there
+are several techniques for data mining. As many parts of data mining can be split into pieces and
+calculated separately, it is very efficient to take Map Reduce algorithms to do so.
+
+As MapReduce processing is computed by large clusters, nowadays with many cloud providers it is more
+a matter of being interested in the results than having the money to buy an own cluster. Almost all
+providers of cloud computing are having resources or hardware optimized solutions for doing
+MapReduce. E.g. Amazons Elastic Map Reduce (EMR) is between $0.015 and $0.50 per hour (Quelle:
+http://aws.amazon.com/de/elasticmapreduce/pricing/), which isn’t really expensive - especially if it
+is for commercial use.
+
+Genetic analysis is an upcoming trend. Today the costs for a complete genetic analysis are below
+\$1000. By doing this analysis on public cloud infrastructure and doing the analysis with the Map
+Reduce paradigm, these costs could be significantly reduced. Maybe in some years, it will be a
+normal thing to analyses the genomes of a person? - The technic is ready to do so. The bigger
+question is: Are the people willing to do that?
+
+
+\begin{figure} [!htb]
+	\begin{center}
+		  \begin{tabular}{@{}r@{}}
+		{\includegraphics[width=14cm]{images/dhbw-Logo.png}}\\
+		\footnotesize\sffamily\textbf{Quelle:} DHBW-Homepage
+	  		   \cite{LiteraturEintrag1}
+ 	 	 \end{tabular}
+		\caption{Das DHBW-Logo}
+		\label{fig:DHBWLogo}
+	\end{center}
+\end{figure}
